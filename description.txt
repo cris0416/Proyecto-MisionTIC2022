@@ -1,6 +1,13 @@
 Proyecto de creacion de una aplicacion para una empresa de industria alimenticia llamada FOOD TEAM XPRESS para la comercialización de frutas y productos derivados de ellas. 
+
 Christian Ruiz, originario de Sogamoso, vivo en Bogotá, tengo Formación tecnica  en electronica.
+
 Edgar Ramirez, actualmente vivo en canada, soy ingeniero civil y estudiante de ingenieria de sistemas, tengo 28 años   
+
 Klaus Yeferson Pulgarin, soy de la ciudad de Popayán, actualmente estudio Administracion de empresas en la Universidad del Cauca, y me motivo inscribirme en misiontic para complementar mis estudios.
-Soy Carlos Alberto Suárez, vivo en BOgotá, soy ingeniero electrónico de la Universidad Central, actualmente estudio Derecho, tengo 35 años y mis expectativas frente al programa son las de aprender diferenctes lenguajes de programación para desarrollar software.
-Soy Gildardo Ocampo estudiante de mision tic, Estudiante de Administarcion de empresas con expectativas de creceer y entender el cocimiento de programación.
+
+Soy Carlos Alberto Suárez, vivo en Bogotá, soy ingeniero electrónico de la Universidad Central, actualmente estudio Derecho, tengo 35 años y mis expectativas frente al programa son las de aprender diferenctes lenguajes de programación para desarrollar software.
+
+Soy Gildardo Ocampo estudiante de mision tic, Estudiante de Administración de empresas con expectativas de crecer y entender el conocimiento de programación.
+
+Christian Borrás Torres, Abogado de profesión, apasionado por la tecnología, nací en Bogotá, espero tener la práctica y el conocimiento para desarrollar futuros proeyctos.
