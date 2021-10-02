@@ -1,5 +1,5 @@
 const productos = [];
-const clases = ['Seleccione de la lista', 'Frutas', 'Verduras', 'Abarrotes', 'Otros']
+const clases = ['Frutas', 'Verduras', 'Abarrotes', 'Otros']
 const selectClases = document.querySelector("#clase-select");
 for(let i=0; i < clases.length; ++i) {
     let option = document.createElement("option");
@@ -20,7 +20,7 @@ const cargarTabla = ()=>{
         let celdaCodigo = document.createElement("td");
         celdaCodigo.innerText = p.codigo;
         let celdaClase = document.createElement("td");
-        celdaClase.innerText = p.clase;
+        celdaClase.innerText = clases[p.clase];
         let celdaDescripcion = document.createElement("td");
         celdaDescripcion.innerText = p.descripcion;
         fila.appendChild(celdaNombre);
