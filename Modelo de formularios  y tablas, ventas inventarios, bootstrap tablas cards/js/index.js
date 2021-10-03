@@ -16,24 +16,30 @@ const cargarTabla = ()=>{
         let celdaNombre = document.createElement("td");
         celdaNombre.innerText = p.nombre;
         let celdaUrl = document.createElement("td");
-
+        celdaUrl.classList.add("text-center");
         let imgProducto = document.createElement("img");
         imgProducto.src = p.url;
         imgProducto.classList.add("img-fluid");
-        
         celdaUrl.appendChild(imgProducto);
-
         let celdaCodigo = document.createElement("td");
         celdaCodigo.innerText = p.codigo;
         let celdaClase = document.createElement("td");
         celdaClase.innerText = clases[p.clase];
         let celdaDescripcion = document.createElement("td");
         celdaDescripcion.innerText = p.descripcion;
+        let celdaAcciones = document.createElement("td");
+        celdaAcciones.classList.add("text-center");
+        let btnEliminar = document.createElement("button");
+        btnEliminar.classList.add("btn", "btn-danger");
+        btnEliminar.innerText = "Eliminar";
+        celdaAcciones.appendChild(btnEliminar);
+
         fila.appendChild(celdaNombre);
         fila.appendChild(celdaCodigo);
         fila.appendChild(celdaClase);
         fila.appendChild(celdaDescripcion);
         fila.appendChild(celdaUrl);
+        fila.appendChild(celdaAcciones);
         tbody.appendChild(fila);
     }
 }
@@ -44,6 +50,7 @@ document.querySelector("#registrar-btn").addEventListener("click", ()=>{
     let codigo = document.querySelector("#codigo-txt").value;
     let clase = document.querySelector("#clase-select").value;
     let descripcion = document.querySelector("#descripcion-txt").value;
+
     
     let producto = {};
     producto.nombre = nombre;
