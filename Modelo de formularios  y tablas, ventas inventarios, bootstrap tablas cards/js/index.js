@@ -16,7 +16,13 @@ const cargarTabla = ()=>{
         let celdaNombre = document.createElement("td");
         celdaNombre.innerText = p.nombre;
         let celdaUrl = document.createElement("td");
-        celdaUrl.innerText = p.url;
+
+        let imgProducto = document.createElement("img");
+        imgProducto.src = p.url;
+        imgProducto.classList.add("img-fluid");
+        
+        celdaUrl.appendChild(imgProducto);
+
         let celdaCodigo = document.createElement("td");
         celdaCodigo.innerText = p.codigo;
         let celdaClase = document.createElement("td");
