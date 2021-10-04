@@ -67,8 +67,8 @@ document.querySelector("#registrar-btn").addEventListener("click", () => {
         productos.push(producto);
         cargarTabla();
     } else {
-        let mensaje = errores.join("\n");
-        Swal.fire("Errores de validación", mensaje, "error");
+        let mensaje = errores.join("<br />");
+        Swal.fire("Errores de validación", mensaje, "warning");
 
     }
 
