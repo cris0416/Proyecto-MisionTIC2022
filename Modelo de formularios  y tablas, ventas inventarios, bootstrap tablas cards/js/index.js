@@ -1,16 +1,16 @@
 const productos = [];
 const clases = ['Frutas', 'Verduras', 'Abarrotes', 'Otros']
 const selectClases = document.querySelector("#clase-select");
-for(let i=0; i < clases.length; ++i) {
+for (let i = 0; i < clases.length; ++i) {
     let option = document.createElement("option");
     option.value = i;
     option.innerText = clases[i];
     selectClases.appendChild(option);
 }
-const cargarTabla = ()=>{
+const cargarTabla = () => {
     const tbody = document.querySelector("#tabla-tbody");
     tbody.innerHTML = "";
-    for(let i=0; i < productos.length; ++i) {
+    for (let i = 0; i < productos.length; ++i) {
         let p = productos[i];
         let fila = document.createElement("tr");
         let celdaNombre = document.createElement("td");
@@ -44,20 +44,32 @@ const cargarTabla = ()=>{
     }
 }
 //AGREGAR UN LISTENER PARA EL EVENTO CLICK
-document.querySelector("#registrar-btn").addEventListener("click", ()=>{
+document.querySelector("#registrar-btn").addEventListener("click", () => {
     let nombre = document.querySelector("#nombre-txt").value;
     let url = document.querySelector("#url-txt").value;
     let codigo = document.querySelector("#codigo-txt").value;
     let clase = document.querySelector("#clase-select").value;
     let descripcion = document.querySelector("#descripcion-txt").value;
+    let errores = [];
+    if (nombre.trim() == "") {
+        errores.push("Debe ingresar el nombre de un artículo");
+    }
+    if (url.trim() == "") {
+        errores.push("Debe ingresar una url");
+    }
+    if (errores.length == 0) {
+        let producto = {};
+        producto.nombre = nombre;
+        producto.url = url;
+        producto.codigo = codigo;
+        producto.clase = clase;
+        producto.descripcion = descripcion;
+        productos.push(producto);
+        cargarTabla();
+    } else {
+        let mensaje = errores.join("\n");
+        Swal.fire("Errores de validación", mensaje, "error");
 
-    
-    let producto = {};
-    producto.nombre = nombre;
-    producto.url = url;
-    producto.codigo = codigo;
-    producto.clase = clase;
-    producto.descripcion = descripcion;
-    productos.push(producto);
-    cargarTabla();
+    }
+
 });
