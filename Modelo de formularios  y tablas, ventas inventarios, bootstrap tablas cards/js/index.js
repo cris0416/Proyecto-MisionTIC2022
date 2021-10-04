@@ -53,6 +53,8 @@ document.querySelector("#registrar-btn").addEventListener("click", () => {
     let errores = [];
     if (nombre.trim() == "") {
         errores.push("Debe ingresar el nombre de un artículo");
+    } else if(productos.find(p=>p.nombre == nombre) != undefined) {
+        errores.push("Un producto con el mismo nombre ya ha sido ingresado");
     }
     if (codigo.trim() == "") {
         errores.push("Falta ingresar el código del producto.");
