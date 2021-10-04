@@ -1,5 +1,9 @@
 const productos = [];
 const clases = ['Frutas', 'Verduras', 'Abarrotes', 'Otros']
+const eliminar = function() {
+    const idProducto = this.idProducto;
+    console.log(idProducto);
+};
 const selectClases = document.querySelector("#clase-select");
 for (let i = 0; i < clases.length; ++i) {
     let option = document.createElement("option");
@@ -32,8 +36,9 @@ const cargarTabla = () => {
         let btnEliminar = document.createElement("button");
         btnEliminar.classList.add("btn", "btn-danger");
         btnEliminar.innerText = "Eliminar";
+        btnEliminar.idProducto = i;
+        btnEliminar.addEventListener("click", eliminar);
         celdaAcciones.appendChild(btnEliminar);
-
         fila.appendChild(celdaNombre);
         fila.appendChild(celdaCodigo);
         fila.appendChild(celdaClase);
@@ -53,7 +58,7 @@ document.querySelector("#registrar-btn").addEventListener("click", () => {
     let errores = [];
     if (nombre.trim() == "") {
         errores.push("Debe ingresar el nombre de un artículo");
-    } else if(productos.find(p=>p.nombre == nombre) != undefined) {
+    } else if(productos.find(p=>p.nombre.toLowerCase() == nombre.toLowerCase()) != undefined) {
         errores.push("Un producto con el mismo nombre ya ha sido ingresado");
     }
     if (codigo.trim() == "") {
