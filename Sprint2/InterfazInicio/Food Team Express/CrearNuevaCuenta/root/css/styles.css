@@ -1,0 +1,124 @@
+body {
+    height: 100%;
+    overflow: hidden;
+    width: 100% !important;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  #logo{
+    width: 150px;
+    position: relative;
+    left: 100px;
+    border-radius: 150px;
+  }
+  .backLeft {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #e74c3c url(/CrearNuevaCuenta/root/img/backgroundcrearcuenta.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .right {
+    width: 50%;
+    height: 100%;
+    background: #f9f9f9;
+    right: 0;
+    position: absolute;
+  }
+  
+  .content {
+    width: 250px;
+    margin: 0 auto;
+    top: 30%;
+    position: absolute;
+    left: 50%;
+    margin-left: -125px;
+  }
+  
+  .content h1 {
+    color: #1b5f1b;
+    font-weight: 300;
+    font-size: 35px;
+    position: relative;
+    left: 80px;
+  }
+
+  h3{
+    color: #178b26;
+    position: relative;
+    left: 70px;
+    
+  }
+
+  .labels{
+    color: #178b26;
+    font-size: 15px;
+  }
+
+  .input{
+    background-color: #eee;
+    width: 350px;
+    height: 40px;
+    margin: 0 auto 15px auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    border-radius: 11px;
+  }
+
+  #SignUp{
+    position: relative;
+    left: 90px;
+    margin-top: 30px;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(226, 183, 42);
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-weight: bolder;
+  }
+  
+  button {
+    background-color: #ffffff;
+    padding: 10px 16px;
+    width: 200px;
+    height: 40px;
+    font-weight: 600;
+    text-transform:  uppercase;
+    font-size: 14px;
+    color: rgb(226, 183, 42);
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+    margin: 15px 15px 15px 0;
+  }
+  
+  button:hover {
+    background: #0288D1;
+    box-shadow: 0 4px 7px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+  }
+  .off {
+    background: none;
+    color: #03A9F4;
+    box-shadow: none;
+  }
+  
+  .right .off:hover {
+    background: #eee;
+    color: #03A9F4;
+    box-shadow: none;
+  }
+  .left .off:hover {
+    box-shadow: none;
+    color: #03A9F4;
+    background: #363A3D;
+  }
+  
+
