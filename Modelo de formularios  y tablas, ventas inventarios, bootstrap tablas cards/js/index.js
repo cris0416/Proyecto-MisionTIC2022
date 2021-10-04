@@ -54,8 +54,14 @@ document.querySelector("#registrar-btn").addEventListener("click", () => {
     if (nombre.trim() == "") {
         errores.push("Debe ingresar el nombre de un artículo");
     }
+    if (codigo.trim() == "") {
+        errores.push("Falta ingresar el código del producto.");
+    }
     if (url.trim() == "") {
-        errores.push("Debe ingresar una url");
+        errores.push("Debe ingresar la url de la imagen del producto.");
+    }
+    if (descripcion.trim() == "") {
+        errores.push("Es necesario que ingrese una descripción del producto.")
     }
     if (errores.length == 0) {
         let producto = {};
