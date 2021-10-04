@@ -63,6 +63,8 @@ document.querySelector("#registrar-btn").addEventListener("click", () => {
     }
     if (codigo.trim() == "") {
         errores.push("Falta ingresar el código del producto.");
+    } else if(productos.find(p=>p.codigo.toLowerCase() == codigo.toLowerCase()) != undefined) {
+        errores.push("Un producto con el mismo codigo ya ha sido ingresado.")
     }
     if (url.trim() == "") {
         errores.push("Debe ingresar la url de la imagen del producto.");
