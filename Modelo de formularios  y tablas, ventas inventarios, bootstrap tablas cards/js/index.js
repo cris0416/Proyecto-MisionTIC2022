@@ -64,10 +64,12 @@ document.querySelector("#registrar-btn").addEventListener("click", () => {
     if (codigo.trim() == "") {
         errores.push("Falta ingresar el código del producto.");
     } else if(productos.find(p=>p.codigo.toLowerCase() == codigo.toLowerCase()) != undefined) {
-        errores.push("Un producto con el mismo codigo ya ha sido ingresado.")
+        errores.push("Un producto con el mismo codigo ya ha sido ingresado.");
     }
     if (url.trim() == "") {
         errores.push("Debe ingresar la url de la imagen del producto.");
+    } else if(productos.find(p=>p.url.toLowerCase() == url.toLowerCase()) != undefined) {
+        errores.push("La imagen correspondiente a esa URL ya ha sido utilizada para otro producto");
     }
     if (descripcion.trim() == "") {
         errores.push("Es necesario que ingrese una descripción del producto.")
