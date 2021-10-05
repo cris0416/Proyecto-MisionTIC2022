@@ -1,8 +1,21 @@
 const productos = [];
 const clases = ['Frutas', 'Verduras', 'Abarrotes', 'Otros']
-const eliminar = function() {
+const eliminar = async function () {
     const idProducto = this.idProducto;
-    console.log(idProducto);
+    const resp = await Swal.fire({
+        title: 'Está seguro de borrar el producto?',
+        text: "Si se borra no se podrá recuperar!",
+        icon: 'alerta',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, borrar el producto!'
+    })
+    if (resp.isConfirmed) {
+        productos.splice(idProducto, 1);
+        cargarTabla();
+        Swal.fire("Producto Borrado", "Producto borrado de la tabla", "info");
+    }
 };
 const selectClases = document.querySelector("#clase-select");
 for (let i = 0; i < clases.length; ++i) {
@@ -58,17 +71,17 @@ document.querySelector("#registrar-btn").addEventListener("click", () => {
     let errores = [];
     if (nombre.trim() == "") {
         errores.push("Debe ingresar el nombre de un artículo");
-    } else if(productos.find(p=>p.nombre.toLowerCase() == nombre.toLowerCase()) != undefined) {
+    } else if (productos.find(p => p.nombre.toLowerCase() == nombre.toLowerCase()) != undefined) {
         errores.push("Un producto con el mismo nombre ya ha sido ingresado");
     }
     if (codigo.trim() == "") {
         errores.push("Falta ingresar el código del producto.");
-    } else if(productos.find(p=>p.codigo.toLowerCase() == codigo.toLowerCase()) != undefined) {
+    } else if (productos.find(p => p.codigo.toLowerCase() == codigo.toLowerCase()) != undefined) {
         errores.push("Un producto con el mismo codigo ya ha sido ingresado.");
     }
     if (url.trim() == "") {
         errores.push("Debe ingresar la url de la imagen del producto.");
-    } else if(productos.find(p=>p.url.toLowerCase() == url.toLowerCase()) != undefined) {
+    } else if (productos.find(p => p.url.toLowerCase() == url.toLowerCase()) != undefined) {
         errores.push("La imagen correspondiente a esa URL ya ha sido utilizada para otro producto");
     }
     if (descripcion.trim() == "") {
