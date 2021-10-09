@@ -1,16 +1,20 @@
 import React from 'react';
-
+import styled from 'styled-components';
 
 const App = () => {
   return (
     <main>
-      <form action="">
+      <Formulario action="">
         <label htmlFor="">Producto</label>
         <input type="text" placeholder="producto" />
         <p>lorem ipsum</p>
-      </form>
+      </Formulario>
     </main>
   );
 }
+
+const Formulario = styled.form`
+    background: #ccc;//backgroud del formulario
+`;
 
 export default App;
