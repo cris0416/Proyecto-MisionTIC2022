@@ -14,7 +14,7 @@ const App = () => {
 }
 
 const Formulario = styled.form`
-    background: #ccc;//backgroud del formulario
-`;
+    background: #ccc;
+`;//backgroud del formulario
 
 export default App;
