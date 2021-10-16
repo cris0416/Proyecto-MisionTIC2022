@@ -1,0 +1,17 @@
+@import url ('https://fonts.googleapis.com/css2? family = Source + Sans + Pro & display = swap')//google fonts
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #bdc4a5;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+main {
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+}

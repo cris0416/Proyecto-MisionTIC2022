@@ -1,0 +1,54 @@
+#header {
+    background: linear-gradient(to left, rgb(5, 85, 17), rgb(13, 138, 13), white);
+}
+
+#logo{
+    position: relative;
+    width: 100px;
+    border-radius: 50%;
+}
+
+h2{
+    left: 450px;
+    color: rgb(22, 97, 28);
+}
+
+.imagenes{
+    width: 300px;
+    border-radius: 20%;
+}
+
+p{
+    color: rgb(7, 131, 62);
+}
+
+#buttons {
+    padding-top: 50px;
+    text-align: center;
+  }
+  
+.btn {
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 22px;
+    text-decoration: none;
+    margin: 20px;
+    color: #FF983C;
+    position: relative;
+    display: inline-block;
+  }
+  
+.btn:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    box-shadow: 0px 1px 0px 0px;
+  }
+  
+.orange {
+    background-color: #e67e22;
+    box-shadow: 0px 5px 0px 0px #CD6509;
+  }
+  
+.orange:hover {
+    background-color: #FF983C;
+  }

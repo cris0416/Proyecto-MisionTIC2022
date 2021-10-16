@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "express-myconnection": "^1.0.4",
+    "mysql": "^2.18.1"
+  }
+}
